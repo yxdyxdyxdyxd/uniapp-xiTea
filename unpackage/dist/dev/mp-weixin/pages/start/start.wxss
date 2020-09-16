@@ -1,0 +1,25 @@
+.start_banner swiper {
+  width: 100vw;
+  height: 100vh;
+}
+.start_banner swiper-item {
+  width: 100vw;
+  height: 100vh;
+}
+.start_banner image {
+  width: 100vw;
+  height: 100vh;
+}
+.start_banner .btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
