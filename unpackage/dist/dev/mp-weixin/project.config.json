@@ -8,8 +8,10 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "",
-	"appid": "touristappid",
+	"appid": "wxb4947c7ec6727301",
 	"projectname": "xiTea",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

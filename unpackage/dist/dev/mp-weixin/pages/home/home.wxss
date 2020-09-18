@@ -1,11 +1,176 @@
-page {
+.home page {
   max-height: 100vh;
 }
-.banner-swiper {
+.home .banner-swiper {
   width: 100%;
   height: 600rpx;
 }
-.banner-swiper image {
+.home .banner-swiper image {
   width: 100%;
+}
+.home .content {
+  padding: 0 30rpx;
+  position: relative;
+  top: -60rpx;
+}
+.home .content .section-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 60rpx 0;
+  margin-bottom: 30rpx;
+  box-shadow: 0 20rpx 20rpx -20rpx rgba(51, 51, 51, 0.1);
+}
+.home .content .section-top .nav:nth-child(1):after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2rpx;
+  background-color: #c8c7cc;
+}
+.home .content .nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+}
+.home .content .nav image {
+  width: 100rpx;
+  margin-bottom: 20rpx;
+}
+.home .content .nav .text-tip {
+  font-size: 48rpx;
+  font-weight: 500;
+  margin-bottom: 10rpx;
+}
+.home .content .text-info {
+  color: #999;
+  font-size: 28rpx;
+}
+.home .content .section-mid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.home .content .section-mid .nav-mid {
+  width: 335rpx;
+  background-color: #eaebec;
+  padding: 30rpx 0;
+  border-radius: 12rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.home .content .section-mid .nav-mid .mid-title {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 32rpx;
+}
+.home .content .section-mid .nav-mid .mid-title image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 10rpx;
+}
+.home .content .section-bottom {
+  margin-bottom: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 26rpx;
+  color: #999;
+  padding: 0 10rpx;
+}
+.home .content .section-bottom .nav-mid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.home .content .section-bottom .integral {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 32rpx;
+  color: #343434;
+  margin-bottom: 10rpx;
+}
+.home .content .section-bottom .integral-num {
+  margin-left: 10rpx;
+  font-size: 42rpx;
+}
+.home .content .section-bottom .integral-done {
+  margin-left: 10rpx;
+}
+.home .content .nav-mid-code {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 0 30rpx;
+  position: relative;
+}
+.home .content .nav-mid-code image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 10rpx;
 }
 

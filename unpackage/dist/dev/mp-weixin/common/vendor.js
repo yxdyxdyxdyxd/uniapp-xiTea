@@ -7879,9 +7879,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!***********************************!*\
-  !*** D:/project/xiTea/pages.json ***!
-  \***********************************/
+/*!******************************************!*\
+  !*** D:/project/uniapp-xiTea/pages.json ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -8028,9 +8028,9 @@ function normalizeComponent (
 /* 15 */,
 /* 16 */,
 /* 17 */
-/*!************************************!*\
-  !*** D:/project/xiTea/api/home.js ***!
-  \************************************/
+/*!*******************************************!*\
+  !*** D:/project/uniapp-xiTea/api/home.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8052,9 +8052,9 @@ var home = function home(banner) {
 
 /***/ }),
 /* 18 */
-/*!**********************************!*\
-  !*** D:/project/xiTea/config.js ***!
-  \**********************************/
+/*!*****************************************!*\
+  !*** D:/project/uniapp-xiTea/config.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
