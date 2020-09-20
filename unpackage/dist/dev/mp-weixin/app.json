@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/start/start",
     "pages/home/home",
-    "pages/index/index",
     "pages/stores/stores",
     "pages/order/order",
     "pages/my/my"
@@ -48,6 +48,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

@@ -1,0 +1,254 @@
+.select-list {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+
+	::-webkit-scrollbar {
+		display: none;
+		width: 0;
+		height: 0;
+		color: transparent;
+	}
+	.header {
+		.search-box {
+			height: 80rpx;
+			padding: 20upx 40upx;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.search-input {
+			height: 60upx;
+			width: 100%;
+			background-color: #f7f7f7;
+			border-radius: 50rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			image {
+				width: 30upx;
+				height: 30upx;
+				margin-right: 10upx;
+			}
+		}
+		.city {
+			height: 110upx;
+			padding: 10upx 40upx;
+			display: flex;
+			flex-direction: column;
+			.city-box {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			.city-select {
+				display: flex;
+				align-items: center;
+				font-size: 32upx;
+				color: #343434;
+				font-weight: 500;
+				overflow: hidden;
+				.address {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+				.icon-left {
+					width: 30upx;
+					height: 30upx;
+					margin: 10upx;
+				}
+				.icon-right {
+					width: 34upx;
+					height: 40upx;
+				}
+			}
+			.btn-select {
+				display: flex;
+				align-items: stretch;
+				background-color: #f6f6f6;
+				border-radius: 50rem;
+				padding: 4upx;
+				border: 2upx solid #eaeaea;
+				button {
+					height: 100%;
+					width: 50%;
+					border-radius: 50rem;
+					border: 0;
+					font-size: 24upx;
+					line-height: 2.4;
+				}
+				.active {
+					background-color: #343434;
+					color: #fff;
+					transform: all 0.3s;
+				}
+			}
+			.distance {
+				color: #999;
+			}
+		}
+		.scroll-notice {
+			height: 40upx;
+			display: flex;
+			align-items: stretch;
+			padding: 10upx 40upx;
+			font-size: 24upx;
+			color: #999;
+			box-shadow: 0 20rpx 20rpx -20rpx rgba(#333, 0.1);
+			.swiper {
+				height: 100%;
+				flex: 1;
+			}
+			.notice-info {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				overflow: hidden;
+				align-items: center;
+				image {
+					width: 30upx;
+					height: 30upx;
+					flex-shrink: 0;
+					margin-right: 10upx;
+				}
+				.notice-content {
+					flex: 1;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+			}
+			.more {
+				display: flex;
+				align-items: center;
+				padding-left: 20upx;
+				image {
+					margin-left: 10upx;
+					width: 40upx;
+					height: 40upx;
+				}
+			}
+		}
+	}
+	.main {
+		flex: 1;
+		display: flex;
+		overflow: hidden;
+		
+		.menu-bar {
+			width: 170upx;
+			background-color: #f6f6f6;
+			
+			.active{
+				background-color: #fff;
+				color: #343434;
+				font-weight: 500;
+				border-left: 7upx solid #DBA871;
+			}
+		}
+		.menu-item {
+			padding: 30upx 20upx;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			color: #999;
+			overflow: hidden;
+			.menu-image {
+				width: 50upx;
+				height: 50upx;
+			}
+			.menu-title {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+		.list {
+			flex: 1;
+			.list-box {
+				padding: 0 20upx;
+				padding-bottom: 130upx;
+			}
+			.swiper-top,
+			.swiper-buttom {
+				height: 300upx;
+				image {
+					width: 100%;
+				}
+			}
+			.banner-top {
+				margin-bottom: 30upx;
+			}
+		}
+		.goods-list {
+			.goods-name {
+				padding: 30upx 0;
+				font-size: 26upx;
+				color: #999;
+			}
+			.goods-box {
+				display: flex;
+				flex-direction: column;
+			}
+			.goods-details {
+				display: flex;
+				align-items: center;
+				margin-bottom: 40upx;
+
+			}
+			.goods-image {
+				width: 180upx;
+				height: 135upx;
+				flex-shrink: 0;
+			}
+			.goods-content {
+				display: flex;
+				flex-direction: column;
+				flex: 1;
+			}
+			.name {
+				font-size: 28upx;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				margin-bottom: 8upx;
+			}
+			.labels {
+				display: flex;
+				font-size: 20upx;
+				margin-bottom: 8upx;
+				overflow: hidden;
+				flex-wrap: wrap;
+			}
+			.label {
+				max-width: 40%;
+				padding: 6upx 10upx;
+				margin-right: 10upx;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.description {
+				margin-bottom: 20upx;
+				font-size: 24upx;
+				color: #999;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+			.price{
+				font-size: 36upx;
+				font-weight: 500;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+	
+		}
+	}
+}

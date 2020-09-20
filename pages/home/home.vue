@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import { home } from '../../api/home.js';
+import { whereData } from '../../api/home.js';
 export default {
 	data() {
 		return {
@@ -64,7 +64,7 @@ export default {
 	},
 	methods: {
 		init() {
-			home('home_banner').then(res => {
+			whereData('home_banner',{belongTo:'home'}).then(res => {
 				this.banners = res.data;
 			});
 		}
@@ -74,9 +74,8 @@ export default {
 
 <style lang="less">
 .home {
-	page {
-		max-height: 100vh;
-	}
+	width: 100%;
+	height: 100%;
 	.banner-swiper {
 		width: 100%;
 		height: 600upx;

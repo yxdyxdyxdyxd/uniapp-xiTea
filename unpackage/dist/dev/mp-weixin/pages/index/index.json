@@ -1,4 +1,7 @@
 {
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {}
+  "navigationBarTitleText": "茶克拉",
+  "disableScroll": true,
+  "usingComponents": {
+    "actions": "/components/actions/actions"
+  }
 }
