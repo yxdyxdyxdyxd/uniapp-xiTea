@@ -84,6 +84,7 @@
   overflow: hidden;
 }
 .select-list .header .city .city-select .address {
+  max-width: 300rpx;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

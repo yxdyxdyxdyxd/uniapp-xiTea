@@ -101,7 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   actions: function() {
-    return __webpack_require__.e(/*! import() | components/actions/actions */ "components/actions/actions").then(__webpack_require__.bind(null, /*! @/components/actions/actions.vue */ 58))
+    return __webpack_require__.e(/*! import() | components/actions/actions */ "components/actions/actions").then(__webpack_require__.bind(null, /*! @/components/actions/actions.vue */ 60))
   }
 }
 var render = function() {
@@ -232,10 +232,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _home = __webpack_require__(/*! ../../api/home.js */ 20);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var Actions = function Actions() {__webpack_require__.e(/*! require.ensure | components/actions/actions */ "components/actions/actions").then((function () {return resolve(__webpack_require__(/*! ../../components/actions/actions.vue */ 58));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+var _home = __webpack_require__(/*! ../../api/home.js */ 20);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var Actions = function Actions() {__webpack_require__.e(/*! require.ensure | components/actions/actions */ "components/actions/actions").then((function () {return resolve(__webpack_require__(/*! ../../components/actions/actions.vue */ 60));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var goodsDetail = function goodsDetail() {__webpack_require__.e(/*! require.ensure | components/goodsDetail/goodsDetail */ "components/goodsDetail/goodsDetail").then((function () {return resolve(__webpack_require__(/*! @/components/goodsDetail/goodsDetail.vue */ 67));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
 
 {
-  components: { Actions: Actions },
+  components: { Actions: Actions, goodsDetail: goodsDetail },
   data: function data() {
     return {
       notices: [],
@@ -243,52 +252,69 @@ var _home = __webpack_require__(/*! ../../api/home.js */ 20);function _interopRe
       categoriesBannerTop: [],
       categoriesBannerBottom: [],
       currentCategoryId: 0,
-      goodsScrollTop: 0 };
+      goodsScrollTop: 0,
+      menuScrollTop: 0,
+      showGoods: false,
+      goods: {},
+      addressName: '' };
 
   },
   mounted: function mounted() {
     this.init();
-
-
   },
   methods: {
-    init: function init() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var noticesRes, categoriesRes, bannerRes;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+    selcetAddress: function selcetAddress() {
+      var _this = this;
+      uni.chooseLocation({
+        success: function success(res) {
+          _this.addressName = res.address;
+          console.log(res.address, res);
+        } });
+
+    },
+    init: function init() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var noticesRes, categoriesRes, bannerRes;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
                   (0, _home.home)('notice'));case 2:noticesRes = _context.sent;
                 if (noticesRes.data) {
-                  _this.notices = noticesRes.data;
+                  _this2.notices = noticesRes.data;
                 }_context.next = 6;return (
                   (0, _home.home)('categories'));case 6:categoriesRes = _context.sent;
                 console.log(categoriesRes, noticesRes);
                 if (categoriesRes.data) {
-                  _this.categories = categoriesRes.data;
+                  _this2.categories = categoriesRes.data;
                 }_context.next = 11;return (
                   (0, _home.home)('home_banner'));case 11:bannerRes = _context.sent;
                 if (bannerRes.data) {
                   bannerRes.data.forEach(function (item) {
                     if (item.belongTo === 'categoricesTop') {
-                      _this.categoriesBannerTop.push(item);
+                      _this2.categoriesBannerTop.push(item);
                     } else if (item.belongTo === 'categoricesBottom') {
-                      _this.categoriesBannerBottom.push(item);
+                      _this2.categoriesBannerBottom.push(item);
                     }
                   });
                 }
-                _this.calcSize();case 14:case "end":return _context.stop();}}}, _callee);}))();
-
+                _this2.calcSize();case 14:case "end":return _context.stop();}}}, _callee);}))();
     },
     handleMenu: function handleMenu(id) {
       this.goodsScrollTop = this.categories.find(function (item) {return item.id == id;}).top;
-      console.log(this.goodsScrollTop);
-
       this.currentCategoryId = id;
-
-
-      console.log(this.currentCategoryId, id, this.goodsScrollTop);
     },
     goodsScroll: function goodsScroll(e) {
-      // console.log(e)
+      var scrollTop = e.detail.scrollTop;
+      var tabs = this.categories.filter(function (item) {return item.top <= Math.ceil(scrollTop);}).reverse();
+      if (tabs.length > 0) {
+        this.currentCategoryId = tabs[0].id;
+        this.menuScrollTop = tabs[0].menuTop;
+      }
+    },
+    add: function add(data) {},
+    minus: function minus(data) {},
+    openMaterials: function openMaterials(data) {
+      this.goods = data;
+      this.showGoods = true;
     },
     calcSize: function calcSize() {
       var h = 0;
+      var menuH = 0;
       var view = uni.createSelectorQuery().select('#banner'); //获取节点
       //获取节点信息
       view.fields(
@@ -301,13 +327,22 @@ var _home = __webpack_require__(/*! ../../api/home.js */ 20);function _interopRe
       exec();
       this.categories.forEach(function (item) {
         var goodDom = uni.createSelectorQuery().select("#list-".concat(item.id));
-        goodDom.fields({ size: true }, function (data) {
+        var menuDom = uni.createSelectorQuery().select("#menu-".concat(item.id));
+        goodDom.
+        fields({ size: true }, function (data) {
           item.top = h;
           h += Math.floor(data.height);
           item.bottom = h;
-        }).exec();
+        }).
+        exec();
+        menuDom.
+        fields({ size: true }, function (data) {
+          item.menuTop = menuH;
+          menuH += Math.floor(data.height);
+          item.menuBottom = menuH;
+        }).
+        exec();
       });
-      console.log(this.categories);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

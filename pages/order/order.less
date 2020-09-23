@@ -1,0 +1,84 @@
+page {
+	background-color: #f6f6f6;
+}
+.order {
+	width: 100%;
+	height: 100%;
+	.navbar {
+		height: 69px;
+		display: flex;
+		background-color: #fff;
+		button {
+			height: 32px;
+			margin-left: 10px;
+			margin-top: 26px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 24upx;
+			padding: 0 20upx;
+			border-radius: 50rem;
+			background-color: #fff;
+			color: #999;
+		}
+		image {
+			width: 40upx;
+			height: 40upx;
+			margin-right: 10upx;
+		}
+	}
+	.order-tabs {
+		height: 100upx;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		.tabs {
+			height: 100%;
+			font-size: 32upx;
+			color: #999;
+			font-weight: 400;
+			display: flex;
+			align-items: center;
+		}
+		.active {
+			color: #343434;
+			border-bottom: 4upx solid #343434;
+		}
+	}
+	.swiper {
+		width: 100%;
+		height: calc(100vh - 44px - 25px - 110rpx);
+		.now-order {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			image {
+				width: 300upx;
+				height: 300upx;
+				margin-bottom: 50upx;
+			}
+			.tips {
+				color: #343434;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin-bottom: 70rpx;
+				view {
+					color: #999;
+				}
+			}
+			button {
+				width: 50%;
+				font-size: 32upx;
+				border-radius: 4upx;
+				background-color: #dba871;
+				color: #fff;
+			}
+		}
+	}
+}

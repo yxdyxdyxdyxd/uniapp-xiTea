@@ -1,12 +1,12 @@
 <template>
 	<view class="actions">
-		<view v-if="!selectBtn" class="addDel">
-			<image class="btn" src="/static/common/round_minus.png" v-show="number"></image>
+		<view v-if="!materialsBtn" class="addDel">
+			<image class="btn" src="/static/common/round_minus.png" v-show="number" @tap="minus"></image>
 			<view  v-show="number" class="number">{{ number }}</view>
-			<image class="btn" src="/static/common/round_add_normal.png"></image>
+			<image class="btn" src="/static/common/round_add_normal.png" @tap="add"></image>
 		</view>
 		<view v-else class="select">
-			<button type="default" size="mini" class="select-btn">选规格</button>
+			<button type="default" size="mini" class="select-btn" @tap="openMaterials">选规格</button>
 			<view class="badge-number" v-show="number">{{ number }}</view>
 		</view>
 	</view>
@@ -19,13 +19,24 @@ export default {
 			type: Number,
 			default: 0
 		},
-		selectBtn: {
+		materialsBtn: {
 			type: Boolean,
 			default: false
 		}
 	},
 	data() {
 		return {};
+	},
+	methods:{
+		add(){
+			this.$emit('add')
+		},
+		minus(){
+			this.$emit('minus')
+		},
+		openMaterials(){
+			this.$emit('openMaterials')
+		}
 	}
 };
 </script>

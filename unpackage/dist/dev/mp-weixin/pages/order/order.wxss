@@ -1,0 +1,117 @@
+page {
+  background-color: #f6f6f6;
+}
+.order {
+  width: 100%;
+  height: 100%;
+}
+.order .navbar {
+  height: 69px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #fff;
+}
+.order .navbar button {
+  height: 32px;
+  margin-left: 10px;
+  margin-top: 26px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-size: 24rpx;
+  padding: 0 20rpx;
+  border-radius: 50rem;
+  background-color: #fff;
+  color: #999;
+}
+.order .navbar image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.order .order-tabs {
+  height: 100rpx;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.order .order-tabs .tabs {
+  height: 100%;
+  font-size: 32rpx;
+  color: #999;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.order .order-tabs .active {
+  color: #343434;
+  border-bottom: 4rpx solid #343434;
+}
+.order .swiper {
+  width: 100%;
+  height: calc(100vh - 44px - 25px - 110rpx);
+}
+.order .swiper .now-order {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.order .swiper .now-order image {
+  width: 300rpx;
+  height: 300rpx;
+  margin-bottom: 50rpx;
+}
+.order .swiper .now-order .tips {
+  color: #343434;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-bottom: 70rpx;
+}
+.order .swiper .now-order .tips view {
+  color: #999;
+}
+.order .swiper .now-order button {
+  width: 50%;
+  font-size: 32rpx;
+  border-radius: 4rpx;
+  background-color: #dba871;
+  color: #fff;
+}
+
