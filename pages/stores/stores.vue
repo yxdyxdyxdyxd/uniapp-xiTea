@@ -1,8 +1,64 @@
 <template>
+	<view class="store">
+		<view class="head-image"><image src="https://prod-mall-cos-1252929494.cos.ap-guangzhou.myqcloud.com/fbd8ec7bc19541d1a692870bff4485b2.png" mode="widthFix"></image></view>
+		<swiper class="banner-swiper" :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
+			<swiper-item>
+				<view class="swiper-item">
+					<image src="https://prod-mall-cos-1252929494.cos.ap-guangzhou.myqcloud.com/9af315b070af452ebe64c4dd4cd71b3a.png" mode="widthFix"></image>
+				</view>
+			</swiper-item>
+			<swiper-item>
+				<view class="swiper-item">
+					<image src="https://prod-mall-cos-1252929494.cos.ap-guangzhou.myqcloud.com/8ed9b00fcbd444b496c550cf0adb2d4a.png" mode="widthFix"></image>
+				</view>
+			</swiper-item>
+			<swiper-item>
+				<view class="swiper-item">
+					<image src="https://prod-mall-cos-1252929494.cos.ap-guangzhou.myqcloud.com/f85179a98f5b4b22b4f24019a6697ee2.png" mode="widthFix"></image>
+				</view>
+			</swiper-item>
+		</swiper>
+		<view class="banner-section">
+			<image src="https://prod-mall-cos-1252929494.cos.ap-guangzhou.myqcloud.com/a3df4889c4154c51b8395337c6625d75.png" mode="widthFix"></image>
+			<image src="https://prod-mall-cos-1252929494.cos.ap-guangzhou.myqcloud.com/f421c2db0d9d4cd19116dc1a450e0bf3.png" mode="widthFix"></image>
+		</view>
+		<view class="content-section">
+			<view class="new-recommend">
+				<view class="section-head">
+					<view class="title">新 品 推 荐</view>
+					<view class="subtitle">NEW ARRIVALS</view>
+				</view>
+				<view class="section-body">
+					<image src="https://prod-mall-cos-1252929494.cos.ap-guangzhou.myqcloud.com/821f48529dab4a61a8b497e4867b9760.png" mode="widthFix"></image>
+					<image src="https://prod-mall-cos-1252929494.cos.ap-guangzhou.myqcloud.com/16ae5b0a73ce4abc9dcd4f4c97a1cdd6.jpg" mode="widthFix"></image>
+				</view>
+			</view>
+			<view class="section-head">
+				<view class="title">猜 你 喜 欢</view>
+				<view class="subtitle">YOU MAY ALSO LIKE</view>
+			</view>
+		</view>
+		<view class="you-may-like">
+			<navigator class="goods" url="" open-type="navigate" hover-class="none">
+				<image src="" mode="widthFix"></image>
+				<view class="info">
+					<view class="desc">
+						<view class="title"></view>
+						<view class="subtitle"></view>
+					</view>
+					<view class="info-bottom">
+						<view class="price">￥</view>
+						<view class="action"><image src="/static/common/round_add_normal.png" mode=""></image></view>
+					</view>
+				</view>
+			</navigator>
+		</view>
+	</view>
 </template>
 
 <script>
+export default {};
 </script>
-
-<style>
+<style lang="less">
+@import './stores.less';
 </style>

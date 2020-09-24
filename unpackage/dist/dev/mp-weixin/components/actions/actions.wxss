@@ -1,7 +1,7 @@
-.actions {
+.actions-comp {
   margin-right: 20rpx;
 }
-.actions .addDel {
+.actions-comp .addDel {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -9,11 +9,11 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.actions .addDel .btn {
+.actions-comp .addDel .btn {
   width: 44rpx;
   height: 44rpx;
 }
-.actions .addDel .number {
+.actions-comp .addDel .number {
   width: 44rpx;
   height: 44rpx;
   margin: 0 20rpx;
@@ -21,16 +21,16 @@
   line-height: 44rpx;
   font-size: 36rpx;
 }
-.actions .select {
+.actions-comp .select {
   position: relative;
 }
-.actions .select .select-btn {
+.actions-comp .select .select-btn {
   border-radius: 50rpx;
   background-color: #dba871;
   font-size: 26rpx;
   color: #fff;
 }
-.actions .select .badge-number {
+.actions-comp .select .badge-number {
   position: absolute;
   right: -16rpx;
   top: -14rpx;

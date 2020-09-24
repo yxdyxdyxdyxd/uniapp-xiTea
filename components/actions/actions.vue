@@ -1,5 +1,5 @@
 <template>
-	<view class="actions">
+	<view class="actions-comp">
 		<view v-if="!materialsBtn" class="addDel">
 			<image class="btn" src="/static/common/round_minus.png" v-show="number" @tap="minus"></image>
 			<view  v-show="number" class="number">{{ number }}</view>
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="less">
-.actions {
+.actions-comp {
 	margin-right: 20upx;
 	.addDel {
 		display: flex;

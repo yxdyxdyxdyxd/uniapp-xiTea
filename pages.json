@@ -1,6 +1,17 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},{
+			"path": "pages/stores/stores",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "茶克拉",
@@ -21,23 +32,12 @@
 			}
 		},
 
-		{
-			"path": "pages/stores/stores",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		},
+
 		{
 			"path": "pages/order/order",
 			"style": {
 				"navigationStyle": "custom",
 				"disableScroll": true
-			}
-		},
-		{
-			"path": "pages/my/my",
-			"style": {
-				"navigationBarTitleText": "uni-app"
 			}
 		}
 	],
@@ -80,9 +80,10 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"permission": {
-		"scope.userLocation": {
-			"desc": "你的位置信息将用于小程序位置接口的效果展示"
+	"easycom": {
+		"autoscan": true, //是否自动扫描组件
+		"custom": { //自定义扫描规则
+			"^uni-(.*)": "@/components/uni-$1/uni-$1.vue"
 		}
 	}
 }
