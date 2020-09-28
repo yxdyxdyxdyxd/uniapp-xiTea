@@ -1,5 +1,7 @@
 page {
 	background-color: #f6f6f6;
+	font-size: 26upx;
+	color: #343434;
 }
 .order {
 	width: 100%;
@@ -8,7 +10,7 @@ page {
 		height: 69px;
 		display: flex;
 		background-color: #fff;
-		button {
+		.talk-btn {
 			height: 32px;
 			margin-left: 10px;
 			margin-top: 26px;
@@ -17,9 +19,10 @@ page {
 			justify-content: center;
 			font-size: 24upx;
 			padding: 0 20upx;
-			border-radius: 50rem;
+			border-radius: 50rem !important;
 			background-color: #fff;
 			color: #999;
+			border: 1upx solid #ccc;
 		}
 		image {
 			width: 40upx;
@@ -49,7 +52,7 @@ page {
 	}
 	.swiper {
 		width: 100%;
-		height: calc(100vh - 44px - 25px - 110rpx);
+		height: calc(100vh - 69px - 110rpx);
 		.now-order {
 			width: 100%;
 			height: 100%;
@@ -78,6 +81,140 @@ page {
 				border-radius: 4upx;
 				background-color: #dba871;
 				color: #fff;
+			}
+		}
+		.history-order {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			.menu {
+				padding: 18upx 30upx;
+				display: flex;
+				align-items: center;
+				font-size: 26upx;
+				color: #666;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 10;
+			}
+			.menu-btn {
+				flex: 1;
+				display: flex;
+				justify-content: start;
+				.active {
+					background-color: #fff;
+					color: #f0ad4e;
+				}
+			}
+			.item {
+				padding: 14upx 30upx;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				image {
+					width: 40upx;
+					height: 40upx;
+					margin-right: 10upx;
+				}
+			}
+			.active {
+				color: #dba871;
+				background-color: #fff;
+			}
+			.history-swiper {
+				width: 100%;
+				height: 100%;
+			}
+			.order-success {
+				width: 100%;
+				height: 100%;
+				padding-top: 104upx;
+			}
+			.order-list {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			.order-success-box {
+				background-color: #fff;
+				padding: 30upx 40upx;
+				margin-bottom: 18upx;
+				.heard {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+				.order-nane {
+					font-size: 28upx;
+				}
+				.order-status {
+					font-size: 26upx;
+					color: #666;
+					display: flex;
+					align-items: center;
+					image {
+						width: 30upx;
+						height: 30upx;
+						margin-left: 10upx;
+					}
+				}
+				.order-image {
+					display: flex;
+					padding: 30upx 0;
+					image {
+						flex-shrink: 0;
+						width: 150upx;
+						height: 112.5upx;
+					}
+				}
+				.info {
+					display: flex;
+					align-items: center;
+					margin-bottom: 30upx;
+					.info-left {
+						flex: 1;
+						display: flex;
+						flex-direction: column;
+						font-size: 26upx;
+						color: #999;
+					}
+					.info-right {
+						font-size: 32upx;
+						color: #343434;
+					}
+				}
+				.action {
+					display: flex;
+					justify-content: flex-end;
+					align-items: center;
+					button {
+						margin-left: 30upx;
+						margin-right: 0upx;
+						font-size: 24upx;
+					}
+					button:nth-last-child(1) {
+						border: 2rpx solid #dba871;
+						color: #dba871;
+					}
+				}
+			}
+			.stores {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				font-size: 26upx;
+				color: #999;
+				line-height: 1.3rem;
+				image {
+					width: 400upx;
+					height: 333upx;
+					margin-bottom: 40upx;
+				}
 			}
 		}
 	}

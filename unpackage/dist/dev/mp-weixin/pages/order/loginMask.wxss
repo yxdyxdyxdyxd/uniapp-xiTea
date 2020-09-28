@@ -1,0 +1,43 @@
+.order-login {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.order-login .tips {
+  color: #343434;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-bottom: 50rpx;
+}
+.order-login .tips view {
+  color: #999;
+}
+.order-login button {
+  width: 50%;
+  font-size: 28rpx;
+  border-radius: 4rpx;
+  background-color: #333;
+  color: #fff;
+  padding: 10rpx 0;
+}
+

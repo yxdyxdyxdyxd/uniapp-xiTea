@@ -1,5 +1,8 @@
 {
   "navigationStyle": "custom",
   "disableScroll": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "login": "/components/login/login",
+    "login-mask": "/pages/order/loginMask"
+  }
 }

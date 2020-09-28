@@ -1,10 +1,10 @@
 <template>
 	<view class="my-info">
-		<image class="head-image" src="https://go.cdn.heytea.com/storage/products/2019/12/18/01954797f3fb470cb6ba1606476c658c.png" mode="widthFix"></image>
+		<image class="head-image" src="https://6465-devl-ed2ju-1303192015.tcb.qcloud.la/xiTea_categories/01954797f3fb470cb6ba1606476c658c.png?sign=0da9368cbbbd895185ed226b504463d0&t=1601088581" mode="widthFix"></image>
 		<view class="content">
 			<view class="welcome">
-				<view class="welcome-text-top">你好 立即登录开启喜茶星球之旅</view>
-				<view class="welcome-text-top" v-if="false">吃瓜啵？大大东</view>
+				<view class="welcome-text-top" v-if="!isLogin" @tap="openLogin">你好 立即登录开启喜茶星球之旅</view>
+				<view class="welcome-text-top" v-if="isLogin">吃瓜啵？{{userInfo.nickName}}</view>
 				<view class="welcome-text-bottom">得闲饮茶HEYTEA一下</view>
 			</view>
 			<view class="member-card">
@@ -16,7 +16,8 @@
 							<image src="/static/my/icon_arrow.png"></image>
 						</view>
 					</view>
-					<image src="https://6465-devl-ed2ju-1303192015.tcb.qcloud.la/xiTea_order/0bdb360866d94aa4a4404c0b676a1982.jpg?sign=d047d8f1ac3fdb69449ae6880295aae8&t=1600955640" class="avatar"></image>
+					<image @tap="openLogin" v-if="!isLogin" src="https://6465-devl-ed2ju-1303192015.tcb.qcloud.la/touxiang.png?sign=56c787f97087d5b93ac546832755195e&t=1601088158" class="avatar"></image>
+					<image v-if="isLogin" :src="userInfo.avatarUrl" class="avatar"></image>
 					<view class="lv">Lv1</view>
 				</view>
 				<view class="card">
@@ -45,12 +46,12 @@
 			<view class="broadcast">
 				<view class="broad-title">星球播报</view>
 				<swiper class="swiper" :autoplay="true" next-margin="50px" :interval="5000" :duration="500" circular>
-					<swiper-item class="swiper-item">
+					<swiper-item class="swiper-item" v-for="item in broadList" :key="item._id">
 						<view class="swiper-wrapper">
-							<image src="" mode=""></image>
+							<image :src="item.coverPic"></image>
 							<view class="desc">
-								<view class="title"></view>
-								<view class="subtitle"></view>
+								<view class="title">{{item.title}}</view>
+								<view class="subtitle">{{item.subtitle}}</view>
 							</view>
 						</view>
 					</swiper-item>
@@ -82,71 +83,48 @@
 		<uni-list :border="false">
 			<uni-list-item v-for="(item, index) in bottomList" :title="item.title" :key="index" :rightText="item.subtitle" link></uni-list-item>
 		</uni-list>
+		<login v-if="showLogin" @loginSuccess="loginSuccess" :showLogin.sync="showLogin"></login>
 	</view>
 </template>
 
 <script>
+	import { home } from '../../api/home.js';
+	import login from '@/components/login/login.vue'
+	import{giftList,bottomList} from './config.js'
 export default {
+	components:{login},
 	data() {
 		return {
-			giftList: [
-				{
-					src: '/static/my/member_benefits/me_rights_icon_free.png',
-					title: '星球赠饮券',
-					number: '1'
-				},
-				{
-					src: '/static/my/member_benefits/me_rights_icon_1jia1.png',
-					title: '买一赠一券',
-					number: '1'
-				},
-				{
-					src: '/static/my/member_benefits/me_rights_icon_2jia1.png',
-					title: '买二赠一券',
-					number: '2'
-				},
-				{
-					src: '/static/my/member_benefits/me_rights_icon_qingshi.png',
-					title: '喜茶轻食券',
-					number: '2'
-				},
-				{
-					src: '/static/my/member_benefits/me_rights_icon_youxian_new.png',
-					title: '优先券',
-					number: '2'
-				},
-				{
-					src: '/static/my/member_benefits/me_rights_icon_waimai_new.png',
-					title: '免运费券',
-					number: '2'
-				}
-			],
-			bottomList: [
-				{
-					title: '会员码',
-					subtitle: '门店扫码积分、喜茶钱包和阿喜有礼卡支持'
-				},
-				{
-					title: '兑换中心',
-					subtitle: '兑换星球会员、喜茶券和阿喜有礼卡'
-				},
-				{
-					title: '星球封面'
-				},
-				{
-					title: '联系客服'
-				},
-				{
-					title: '消息中心'
-				},
-				{
-					title: '更多'
-				}
-			]
+			showLogin:false,
+			userInfo:{},
+			isLogin:false,
+			broadList:[],
+			giftList:giftList,
+			bottomList: bottomList
 		};
 	},
-	mounted() {},
-	methods: {}
+	mounted() {
+		this.init()
+	},
+	methods: {
+	async init(){
+			if(uni.getStorageSync('userInfo')){
+				this.userInfo=uni.getStorageSync('userInfo')
+				this.isLogin=true
+			}
+			let broadRes=await home('broadcast')
+			if(broadRes&&broadRes.data){
+				this.broadList=broadRes.data
+			}
+		},
+		openLogin(){
+			this.showLogin=true
+		},
+		loginSuccess(data){
+			this.userInfo=data
+			this.isLogin=true
+		}
+	}
 };
 </script>
 <style lang="less">

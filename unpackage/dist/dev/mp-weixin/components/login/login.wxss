@@ -1,0 +1,87 @@
+.login-dialong {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  border-radius: 24rpx 24rpx 0 0;
+  height: 50vh;
+  padding: 50rpx 40rpx;
+}
+.login-dialong .close-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+}
+.login-dialong .close-box image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.login-dialong .tips {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.login-dialong .tips .welcome-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.login-dialong .tips .text-big {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #343434;
+  margin-bottom: 30rpx;
+}
+.login-dialong .tips .subtitle {
+  font-size: 26rpx;
+  color: #999;
+}
+.login-dialong .tips .login-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.login-dialong .tips .login-btn {
+  width: 100%;
+  font-size: 32rpx;
+  margin-bottom: 30rpx;
+  background-color: #DBA871;
+  color: #fff;
+}
+.login-dialong .tips .text-box {
+  text-align: center;
+  margin-bottom: 30rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.login-dialong .tips .privacy {
+  text-align: center;
+  font-size: 24rpx;
+  color: #DBA871;
+}
+

@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/order/order",
     "pages/my/my",
     "pages/stores/stores",
     "pages/index/index",
     "pages/start/start",
-    "pages/home/home",
-    "pages/order/order"
+    "pages/home/home"
   ],
   "subPackages": [],
   "window": {

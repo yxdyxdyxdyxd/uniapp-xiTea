@@ -1,5 +1,7 @@
 page {
   background-color: #f6f6f6;
+  font-size: 26rpx;
+  color: #343434;
 }
 .order {
   width: 100%;
@@ -12,7 +14,7 @@ page {
   display: flex;
   background-color: #fff;
 }
-.order .navbar button {
+.order .navbar .talk-btn {
   height: 32px;
   margin-left: 10px;
   margin-top: 26px;
@@ -27,9 +29,10 @@ page {
           justify-content: center;
   font-size: 24rpx;
   padding: 0 20rpx;
-  border-radius: 50rem;
+  border-radius: 50rem !important;
   background-color: #fff;
   color: #999;
+  border: 1rpx solid #ccc;
 }
 .order .navbar image {
   width: 40rpx;
@@ -66,7 +69,7 @@ page {
 }
 .order .swiper {
   width: 100%;
-  height: calc(100vh - 44px - 25px - 110rpx);
+  height: calc(100vh - 69px - 110rpx);
 }
 .order .swiper .now-order {
   width: 100%;
@@ -113,5 +116,199 @@ page {
   border-radius: 4rpx;
   background-color: #dba871;
   color: #fff;
+}
+.order .swiper .history-order {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.order .swiper .history-order .menu {
+  padding: 18rpx 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-size: 26rpx;
+  color: #666;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.order .swiper .history-order .menu-btn {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+          justify-content: start;
+}
+.order .swiper .history-order .menu-btn .active {
+  background-color: #fff;
+  color: #f0ad4e;
+}
+.order .swiper .history-order .item {
+  padding: 14rpx 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.order .swiper .history-order .item image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.order .swiper .history-order .active {
+  color: #dba871;
+  background-color: #fff;
+}
+.order .swiper .history-order .history-swiper {
+  width: 100%;
+  height: 100%;
+}
+.order .swiper .history-order .order-success {
+  width: 100%;
+  height: 100%;
+  padding-top: 104rpx;
+}
+.order .swiper .history-order .order-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.order .swiper .history-order .order-success-box {
+  background-color: #fff;
+  padding: 30rpx 40rpx;
+  margin-bottom: 18rpx;
+}
+.order .swiper .history-order .order-success-box .heard {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.order .swiper .history-order .order-success-box .order-nane {
+  font-size: 28rpx;
+}
+.order .swiper .history-order .order-success-box .order-status {
+  font-size: 26rpx;
+  color: #666;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.order .swiper .history-order .order-success-box .order-status image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+.order .swiper .history-order .order-success-box .order-image {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 30rpx 0;
+}
+.order .swiper .history-order .order-success-box .order-image image {
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+  width: 150rpx;
+  height: 112.5rpx;
+}
+.order .swiper .history-order .order-success-box .info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-bottom: 30rpx;
+}
+.order .swiper .history-order .order-success-box .info .info-left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  font-size: 26rpx;
+  color: #999;
+}
+.order .swiper .history-order .order-success-box .info .info-right {
+  font-size: 32rpx;
+  color: #343434;
+}
+.order .swiper .history-order .order-success-box .action {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.order .swiper .history-order .order-success-box .action button {
+  margin-left: 30rpx;
+  margin-right: 0rpx;
+  font-size: 24rpx;
+}
+.order .swiper .history-order .order-success-box .action button:nth-last-child(1) {
+  border: 2rpx solid #dba871;
+  color: #dba871;
+}
+.order .swiper .history-order .stores {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 1.3rem;
+}
+.order .swiper .history-order .stores image {
+  width: 400rpx;
+  height: 333rpx;
+  margin-bottom: 40rpx;
 }
 

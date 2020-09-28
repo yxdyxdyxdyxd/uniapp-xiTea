@@ -1,0 +1,1 @@
+<view class="order-login"><view class="tips"><view>您还没有登录</view><view>请登录后查看您的茶克拉订单</view></view><button type="default" hover-class="none" data-event-opts="{{[['tap',[['openLogin',['$event']]]]]}}" bindtap="__e">登录查看</button></view>
